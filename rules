@@ -1,4 +1,23 @@
 #!/usr/bin/make -f
 
 %:
-	dh $@
+	dh $@ --sourcedirectory=vpux_elf
+
+override_dh_auto_configure:
+	dh_auto_configure -- \
+		-DCMAKE_BUILD_TYPE=Release \
+		-DBUILD_SHARED_LIBS=ON \
+
+override_dh_install:
+	mkdir -p usr/lib/x86_64-linux-gnu/
+	mkdir -p usr/include/
+	cp obj-x86_64-linux-gnu/*.so usr/lib/x86_64-linux-gnu/
+	cp vpux_elf/hpi_component/include/common/*.hpp usr/include/
+	cp -r vpux_elf/core/include/vpux_elf/ usr/include/
+	cp -r vpux_elf/loader/include/vpux_headers/ usr/include/
+	dh_install
+
+override_dh_clean:
+	rm -rf obj-x86_64-linux-gnu
+	rm -rf usr
+	dh_clean

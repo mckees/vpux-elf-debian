@@ -1,4 +1,4 @@
-Source: linux-npu-driver
+Source: vpux-elf
 Section: libs
 Priority: optional
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
@@ -8,25 +8,13 @@ Build-Depends:
  debhelper-compat (= 13),
  build-essential,
  cmake,
+ intel-npu-firmware-headers,
 Standards-Version: 4.6.2
-Homepage: https://github.com/intel/linux-npu-driver
-#Vcs-Browser: https://salsa.debian.org/debian/linux-npu-driver
-#Vcs-Git: https://salsa.debian.org/debian/linux-npu-driver.git
+Homepage: https://github.com/openvinotoolkit/vpux_plugin_elf.git
 
-Package: intel-npu-firmware-headers
+Package: vpux-elf
 Architecture: amd64
 Multi-Arch: same
 Depends:
- ${shlibs:Depends},
  ${misc:Depends},
-Description: This package contains the firmware headers for Intel® NPU device.
-
-#Package: linux-npu-driver-dev
-#Section: libdevel
-#Architecture: amd64
-#Multi-Arch: same
-#Depends:
-# linux-npu-driver (= ${binary:Version}),
-# ${misc:Depends},
-#Description: This dev package contains the driver for Intel® NPU device.
-# Intel® NPU device is an AI inference accelerator integrated with Intel client CPUs, starting from Intel® Core™ Ultra generation of CPUs (formerly known as Meteor Lake). It enables energy-efficient execution of artificial neural network tasks.
+Description: A dependency for the Linux NPU Driver

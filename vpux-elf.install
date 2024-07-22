@@ -1,0 +1,5 @@
+usr/lib/x86_64-linux-gnu/libvpux_elf.so
+usr/lib/x86_64-linux-gnu/libnpu_elf.so
+usr/include/*.hpp
+usr/include/vpux_elf/
+usr/include/vpux_headers/

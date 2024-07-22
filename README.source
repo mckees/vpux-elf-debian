@@ -1,7 +1,8 @@
-linux-npu-driver for Debian
+npu_plugin_elf for Debian
 --------------------------
 
-Please see README at https://github.com/intel/linux-npu-driver for further information
+This is a dependency for linux-npu-driver. Please see the source at 
+https://github.com/openvinotoolkit/npu_plugin_elf for more information.
 
 
  -- Shane McKee <shane.mckee@canonical.com>  Thu, 11 Jul 2024 19:30:21 +0800
