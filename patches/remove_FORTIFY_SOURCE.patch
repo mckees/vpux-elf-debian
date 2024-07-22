@@ -1,0 +1,23 @@
+Description: Remove _FORTIFY_SOURCE
+ _FORTIFY_SOURCE is causing build failures, so it is disabled for now
+Author: Shane McKee <shane.mckee@canonical.com>
+Forwarded: not-needed
+Last-Update: 2024-07-17
+Index: linux-npu-driver-1.5.1/cmake/compiler_flags.cmake
+===================================================================
+--- linux-npu-driver-1.5.1.orig/cmake/compiler_flags.cmake
++++ linux-npu-driver-1.5.1/cmake/compiler_flags.cmake
+@@ -25,13 +25,6 @@ add_compile_options(
+   -fdebug-prefix-map=${CMAKE_SOURCE_DIR}=.
+ )
+ 
+-if(NOT ${LINUX_SYSTEM_NAME} STREQUAL "cros sdk")
+-    add_compile_options(
+-      # Enable macro security features
+-      -D_FORTIFY_SOURCE=2
+-    )
+-endif()
+-
+ add_link_options(
+   # Read only relocation (RERLO)
+   "SHELL:$<$<CONFIG:Release>:-z relro>"
