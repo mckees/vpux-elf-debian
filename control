@@ -17,4 +17,6 @@ Architecture: amd64
 Multi-Arch: same
 Depends:
  ${misc:Depends},
-Description: A dependency for the Linux NPU Driver
+Description: Dependency for the Linux NPU Driver
+ This is a package of the openvinotoolkit/vpux_plugin_elf repo, which is a
+ dependency for the linux-npu-driver repo.

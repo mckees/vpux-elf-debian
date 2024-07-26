@@ -1,9 +1,9 @@
 npu_plugin_elf for Debian
 --------------------------
 
-This is a dependency for linux-npu-driver. Please see the source at 
-https://github.com/openvinotoolkit/npu_plugin_elf for more information.
-
+This is a dependency for linux-npu-driver. Please see the README at
+https://github.com/openvinotoolkit/npu_plugin_elf/blob/master/vpux_elf/README.md
+for more information.
 
  -- Shane McKee <shane.mckee@canonical.com>  Thu, 11 Jul 2024 19:30:21 +0800
 

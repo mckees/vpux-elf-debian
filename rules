@@ -7,6 +7,7 @@ override_dh_auto_configure:
 	dh_auto_configure -- \
 		-DCMAKE_BUILD_TYPE=Release \
 		-DBUILD_SHARED_LIBS=ON \
+	dh_auto_configure
 
 override_dh_install:
 	mkdir -p usr/lib/x86_64-linux-gnu/
